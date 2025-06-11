@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+$color-primary: #ffffff;
+$color-secondary: #755c44;
+$font-size: 20px;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: $color-primary;
+  background-color: $color-secondary;
+}
+
+.secondary {
+  background-color: $color-primary;
+  color: $color-secondary;
+}
+
+p, th, td {
+  font-size: $font-size;
+}
+
+table {
+  border: 2px solid $color-primary;
+  border-radius: 0.2em;
+}
+th, td {
+  border: 0.2px solid $color-primary;
+  padding: 0.5em;
+  border-radius: 0.2em;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

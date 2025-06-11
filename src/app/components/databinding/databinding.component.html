@@ -1,0 +1,42 @@
+<!--src/app/components/databinding.component.html -->
+<button type="button" (click)="showWelcomeMessage()">Click this</button>
+
+<table (mouseenter)="changeColor()" (mouseleave)="changeColor()" [className]="tableClass">
+    <tr>
+        <th>
+            Course Name
+        </th>
+        <th>
+            ProductID
+        </th>
+    </tr>
+    <tr>
+        <td>
+            {{courseName}}
+        </td>
+        <td>
+            {{productID}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" placeholder="{{courseName}}" />
+        </td>
+        <td>
+            <input type="text" [maxLength]="maxLength" placeholder="Max Length: {{maxLength}}"/>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label for="{{courseName}}">{{courseName}}</label>
+            <input type="{{inputType}}" name="{{courseName}}" id="">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="{{myClassName}}">this is string interpolation - not good</p>
+            <p [class]="myClassName"> this is property binding - good</p>
+        </td>
+    </tr>
+</table>
