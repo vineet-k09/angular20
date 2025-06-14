@@ -26,6 +26,7 @@ p, th, td {
 table {
   border: 2px solid $color-primary;
   border-radius: 0.2em;
+  max-width: 20vw;
 }
 th, td {
   border: 0.2px solid $color-primary;

@@ -1,7 +1,15 @@
 <!--src/app/components/databinding.component.html -->
-<button type="button" (click)="showWelcomeMessage()">Click this</button>
+<button type="button" (click)="showWelcomeMessage()">Click for alert</button>
+<button type="button" (click)="changeCourseName()">Change course</button>
 
 <table (mouseenter)="changeColor()" (mouseleave)="changeColor()" [className]="tableClass">
+    <tr>
+        <td>
+            <select name="number" id="number-select" (change)="onCityChange($event)">
+                <option [value]="i.key" *ngFor="let i of dict | keyvalue">{{i.value}}</option>
+            </select>
+        </td>
+    </tr>
     <tr>
         <th>
             Course Name
